@@ -1,20 +1,4 @@
-use reqwest::{Client, Method, Request, RequestBuilder, Url};
-use std::env;
-use json::{self};
-use serde::{Serialize, Deserialize};
-pub use app::App;
-pub mod app;
-
-// #[derive(Serialize, Deserialize)]
-// struct Movie {
-//     title: String,
-//     release_date: String,
-//     rating: f32,
-//     actor_list: ActorList, // TODO Create this datatype
-//     length: String,
-//     movie_poster: String, // will most likely point towards a URL or path
-//     where_to_watch: ProviderList, //TODO Creat this datatype
-// }
+use whatshouldwewatch::App;
 
 #[tokio::main]
 async fn main() -> color_eyre::Result<()> {
