@@ -37,7 +37,7 @@ impl App {
     /// - <https://docs.rs/ratatui/latest/ratatui/widgets/index.html>
     /// - <https://github.com/ratatui/ratatui/tree/main/ratatui-widgets/examples>
     fn render(&mut self, frame: &mut Frame) {
-        let title = Line::from("Ratatui Simple Template")
+        let title = Line::from("What Should We Watch")
         .bold()
         .blue()
         .centered();
