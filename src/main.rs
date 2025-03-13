@@ -10,7 +10,7 @@ async fn main() -> color_eyre::Result<()> {
     //         .unwrap(),
     //     ),
     // ).header("Authorization", "Bearer")
-    // .header("accept", "application/json")
+    // .header("accept", "application/json") // TODO: Implement a solution so the token doesn't need to be hardcoded'
     // .send()
     // .await.unwrap();
     //
