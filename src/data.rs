@@ -75,6 +75,7 @@ pub struct Movie {
     length: String,
     movie_poster: String, // will most likely point towards a URL or path
     where_to_watch: ProviderList,
+    similar_titles: Vec<Movie>
 }
 
 impl Movie {
@@ -86,6 +87,7 @@ impl Movie {
         length: String,
         movie_poster: String, // will most likely point towards a URL or path
         where_to_watch: ProviderList,
+        similar_titles: Vec<Movie>
     ) -> Self {
         Self {
             title,
@@ -95,6 +97,7 @@ impl Movie {
             length,
             movie_poster, // will most likely point towards a URL or path
             where_to_watch,
+            similar_titles
         }
     }
 }
