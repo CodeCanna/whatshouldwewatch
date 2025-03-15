@@ -41,40 +41,14 @@ impl Actor {
 }
 
 #[derive(Serialize, Deserialize)]
-pub struct ActorList {
-    pub actor_list: Vec<Actor>,
-}
-
-impl ActorList {
-    pub fn new(actor_list: Vec<Actor>) -> Self {
-        Self {
-            actor_list
-        }
-    }
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct ProviderList {
-    pub provider_list: Vec<StreamingProviders>
-}
-
-impl ProviderList {
-    pub fn new(provider_list: Vec<StreamingProviders>) -> Self {
-        Self {
-            provider_list
-        }
-    }
-}
-
-#[derive(Serialize, Deserialize)]
 pub struct Movie {
     title: String,
     release_date: String,
     rating: f32,
-    actor_list: ActorList,
+    actor_list: Vec<Actor>,
     length: String,
     movie_poster: String, // will most likely point towards a URL or path
-    where_to_watch: ProviderList,
+    where_to_watch: Vec<StreamingProviders>,
     similar_titles: Vec<Movie>
 }
 
@@ -83,10 +57,10 @@ impl Movie {
         title: String,
         release_date: String,
         rating: f32,
-        actor_list: ActorList,
+        actor_list: Vec<Actor>,
         length: String,
         movie_poster: String, // will most likely point towards a URL or path
-        where_to_watch: ProviderList,
+        where_to_watch: Vec<StreamingProviders>,
         similar_titles: Vec<Movie>
     ) -> Self {
         Self {
